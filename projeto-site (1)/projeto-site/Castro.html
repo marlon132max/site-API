@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cadastro-page">
+  <div class="form-box">
+    <h2>Cadastro </h2>
+    <form>
+      <input type="text" id="nome" placeholder="Nome completo">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="senha" placeholder="Senha">
+      <input type="text" id="hospede" placeholder="hospede">
+      <button type="submit" onclick="enviar()">Cadastrar</button>
+      <div class="cadastro-link">
+      <a href="Locatario.html">Faça cadastro como locatario</a>
+    </div>
+    </form>
+  <p id="resposta"></p>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+  </div>
+</body>
+</html>

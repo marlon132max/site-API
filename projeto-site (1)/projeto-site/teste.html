@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll por Sessão</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth; /* Rolagem suave */
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    section {
+      height: 100vh; /* Cada seção ocupa 100% da altura da tela */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3em;
+      color: white;
+      transition: background 0.5s;
+    }
+
+    #sessao1 { background-color: #ff595e; }
+    #sessao2 { background-color: #1982c4; }
+    #sessao3 { background-color: #6a4c93; }
+    #sessao4 { background-color: #8ac926; }
+    
+    /* Pequeno indicador de seção */
+    .indicator {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .indicator div {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .indicator .active {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <section id="sessao1">Seção 1</section>
+  <section id="sessao2">Seção 2</section>
+  <section id="sessao3">Seção 3</section>
+  <section id="sessao4">Seção 4</section>
+
+  <!-- Indicadores de seção -->
+  <div class="indicator">
+    <div data-section="sessao1" class="active"></div>
+    <div data-section="sessao2"></div>
+    <div data-section="sessao3"></div>
+    <div data-section="sessao4"></div>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const indicators = document.querySelectorAll('.indicator div');
+
+    // Função para ativar indicador conforme a seção visível
+    window.addEventListener('scroll', () => {
+      let index = sections.length - 1;
+      for (let i = 0; i < sections.length; i++) {
+        const rect = sections[i].getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2) {
+          index = i;
+        }
+      }
+      indicators.forEach(ind => ind.classList.remove('active'));
+      indicators[index].classList.add('active');
+    });
+
+    // Scroll ao clicar no indicador
+    indicators.forEach(ind => {
+      ind.addEventListener('click', () => {
+        const target = document.getElementById(ind.dataset.section);
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>

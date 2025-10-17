@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Aluguel - Home</title>
+    <!-- Inclui a fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <!-- O CSS principal que contém todas as regras -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="index-page">
+    <!-- ================== BARRA DE TOPO FIXA ================== -->
+    <header class="top-bar">
+        <div class="container">
+
+            <!-- Barra de Pesquisa (Central) -->
+            <div class="search-input-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" placeholder="Buscar casas, apartamentos, destinos...">
+            </div>
+
+            <!-- Botões de Ação (Direita) -->
+            <a href="Login.html"><button>Entrar</button></a>
+            <a href="Castro.html"><button>Cadastrar</button></a>
+        </div>
+    </header>
+
+    <!-- ================== CONTEÚDO PRINCIPAL (SEÇÕES) ================== -->
+
+    <!-- Seção 1: Galeria de Cards (3 por linha) -->
+
+    <div class="simple-card">
+        <img src="" alt="Casa na Praia" class="card-image">
+        <div class="card-info">
+            <div class="card-title">Casa em Ubatuba</div>
+            <p class="card-location">Praia Grande, São Paulo</p>
+            <p class="card-price"><strong>R$ 450</strong> / noite</p>
+        </div>
+    </div>
+
+    <!-- Card 2: Cidade -->
+    <div class="simple-card">
+        <img src="https://placehold.co/400x250/F1F1F1/4B6CB7?text=Apê+SP" alt="Apartamento na Cidade"
+            class="card-image">
+        <div class="card-info">
+            <div class="card-title">Apê Moderno</div>
+            <p class="card-location">Jardins, São Paulo</p>
+            <p class="card-price"><strong>R$ 320</strong> / noite</p>
+        </div>
+    </div>
+
+    <!-- Card 3: Montanha -->
+    <div class="simple-card">
+        <img src="https://placehold.co/400x250/F1F1F1/8E44AD?text=Cabana+Inverno" alt="Cabana na Montanha"
+            class="card-image">
+        <div class="card-info">
+            <div class="card-title">Cabana Aconchegante</div>
+            <p class="card-location">Campos do Jordão, SP</p>
+            <p class="card-price"><strong>R$ 580</strong> / noite</p>
+        </div>
+    </div>
+
+    <!-- Card 4: Família -->
+    <div class="simple-card">
+        <img src="https://placehold.co/400x250/F1F1F1/27AE60?text=Sítio+Eventos" alt="Sítio para Eventos"
+            class="card-image">
+        <div class="card-info">
+            <div class="card-title">Sítio com Piscina</div>
+            <p class="card-location">Ouro Preto, Minas Gerais</p>
+            <p class="card-price"><strong>R$ 690</strong> / noite</p>
+        </div>
+    </div>
+
+    <!-- Card 5: Estúdio -->
+    <div class="simple-card">
+        <img src="https://placehold.co/400x250/F1F1F1/F39C12?text=Estúdio+Centro" alt="Estúdio Moderno"
+            class="card-image">
+        <div class="card-info">
+            <div class="card-title">Estúdio Central</div>
+            <p class="card-location">Centro Cívico, Curitiba</p>
+            <p class="card-price"><strong>R$ 250</strong> / noite</p>
+        </div>
+    </div>
+
+    <!-- Card 6: Histórico -->
+    <div class="simple-card">
+        <img src="https://placehold.co/400x250/F1F1F1/C0392B?text=Casa+Colonial" alt="Casa Histórica"
+            class="card-image">
+        <div class="card-info">
+            <div class="card-title">Casa Histórica</div>
+            <p class="card-location">Centro Histórico, RJ</p>
+            <p class="card-price"><strong>R$ 490</strong> / noite</p>
+        </div>
+    </div>
+    </div> <!-- Fim da cards-grid -->
+    </section>
+
+    <!-- Seção 2: Merchan / Chamada de Marketing -->
+    <section id="sessao2" data-section="sessao2">
+        <div class="merchan-box">
+            <h2 class="merchan-title">Suas Férias Perfeitas Começam Aqui!</h2>
+            <p class="merchan-text">
+                Venha alugar casas e apartamentos exclusivos para passar as férias. De cabanas nas montanhas a bangalôs
+                na praia, encontre a experiência ideal para você e sua família com conforto, segurança e as melhores
+                avaliações do mercado. Não perca as ofertas de alta temporada!
+            </p>
+            <button class="cta-button">Ver Ofertas de Verão!</button>
+        </div>
+    </section>
+
+    <!-- Seção 3: Conteúdo Padrão -->
+    <section id="sessao3" data-section="sessao3">
+        <h2>Recursos e Ferramentas</h2>
+        <p>A seção 3 é um ótimo lugar para destacar as funcionalidades do sistema.</p>
+    </section>
+
+    <!-- Seção 4: Conteúdo Padrão -->
+    <section id="sessao4" data-section="sessao4">
+        <h2>Contato e Suporte</h2>
+        <p>Encontre todas as informações de contato.</p>
+    </section>
+
+    <!-- Indicadores de seção (Corretamente fora das seções) -->
+    <div class="indicator">
+        <div data-section-target="sessao1" class="active"></div>
+        <div data-section-target="sessao2"></div>
+        <div data-section-target="sessao3"></div>
+        <div data-section-target="sessao4"></div>
+    </div>
+
+    <!-- Script JS para a lógica de navegação -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
